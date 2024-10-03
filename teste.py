@@ -1,16 +1,17 @@
 # Importar bibliotecas
 import numpy as np
 import pandas as pd
-from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
 
-# Carregar o Iris Dataset
-iris = load_iris()
-X = iris.data  # Features
-y = iris.target  # Labels (classes)
+# Criar um DataFrame de exemplo
+# Para este exemplo, vamos criar um DataFrame fictício com dados aleatórios
+np.random.seed(42)
+data_size = 100
+X = np.random.rand(data_size, 4)  # 4 features
+y = np.random.randint(0, 3, data_size)  # 3 classes
 
 # Dividir o dataset em treino e teste (80% treino, 20% teste)
 X_train, X_test, y_train, y_test = train_test_split(
